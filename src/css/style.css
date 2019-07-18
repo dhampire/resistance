@@ -1,6 +1,8 @@
 body{
 	background: rgba(255,255,25, 1) url('../img/bg.jpeg') no-repeat center center fixed;
 	background-size: cover;
+	color: white;
+	font-size: 16px;
 }
 
 /* header
@@ -327,7 +329,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Form*/
 .resistance__forms{
-	margin-top: 200px
+	background: rgba(0,0,0, .8);
+	padding: 5rem;
+	border-radius: 5px;
+	margin-top: 200px;
 }
 
 .badgebox
@@ -351,3 +356,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 	{
 		text-indent: 0;
 	}
+
+input, select {
+	background: rgba(255,255,255, .1) !important;
+	color: white !important;
+	font-weight: bold !important;
+}
