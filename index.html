@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Risistance</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+	<link rel="stylesheet" href="src/css/style.css">
+	<script src="https://kit.fontawesome.com/81bdcc7ff8.js"></script>
+</head>
+<body>
+<div class="content-fluid">
+<!-- ************************
+		h e a d e r
+ ***************************-->
+
+	<header id="header">
+    	<div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="src/img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Inicio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    	</div>
+	</header><!-- #header -->
+
+<!-- ************************
+		form
+ ***************************-->
+
+<div class="container resistance__forms">
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <form action="#" class="" method="POST" id="form">
+            <div class="form-group col-md-6">
+                <div class="inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input name="name" placeholder="Nombre" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- apellidos -->
+            <div class="form-group col-md-6">
+                <div class="inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input name="lastname" placeholder="Apellidos" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- Carnet de identidad -->
+            <div class="form-group col-md-6">
+                <div class="inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fas fa-id-card-alt"></i></span>
+                        <input name="ci" placeholder="Carnet de identidad" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+			<!-- ciudad -->
+            <div class="form-group col-md-6">
+<!--             	<label class="control-label">Ciudad</label> -->
+                <div class="selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fas fa-city"></i></span>
+                        <select name="pais" class="form-control selectpicker">
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="La Paz">La Paz</option>
+                            <option value="Cochabamba">Cochabamba</option>
+                            <option value="Oruro">Oruro</option>
+                            <option value="Potosi">Potosi</option>
+                            <option value="Chuquisaca">Chuquisaca</option>
+                            <option value="Tarija">Tarija</option>
+                            <option value="Beni">Beni</option>
+                            <option value="Pando">Pando</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- correo -->
+            <div class="form-group col-md-6">
+                <div class="inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                        <input name="mail" placeholder="Correo Electrónico" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Telefono -->
+            <div class="form-group col-md-6">
+                <div class="inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input name="telefono" placeholder="Numero telefónico o móvil / Phone" class="form-control" type="text">
+                    </div>
+                </div>
+            </div>
+            <!-- Pais -->
+            <div class="form-group col-xs-12">
+                <div class="selectContainer">
+					<div class="text-center">
+				        
+				        <h2>Marca si asististe a:</h2>
+				        
+						<label for="default" class="btn btn-primary">Road to Ultra 2015
+
+							<input type="checkbox" id="default" class="badgebox">
+							<span class="badge">&check;</span>
+						</label>
+				        <label for="primary" class="btn btn-primary">Road to Ultra 2015
+				        	<input type="checkbox" id="primary" class="badgebox">
+				        	<span class="badge">&check;</span>
+				        </label>
+				        <label for="info" class="btn btn-primary">Info 
+				        	<input type="checkbox" id="info" class="badgebox">
+				        	<span class="badge">&check;</span>
+				        </label>
+					</div>
+                </div>
+            </div>
+            <!-- Enviar -->
+            <div class="form-group">
+                <label for="enviar" class="control-label"></label>
+                <a href=""><button type="submit" class="btn boton" name="enviar">Registrarte <span class="fa fa-send"></span></button></a>
+            </div>
+        </form>
+	</div>
+
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+<script src="src/js/main.js"></script>
+<script src="src/js/validator.js"></script>
+</body>
+</html>
