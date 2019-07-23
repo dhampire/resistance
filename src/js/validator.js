@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('#form').bootstrapValidator({
+        container: 'tooltip',
 		feedbackIcons: {
 			valid: 'glyphicon glyphicon-ok',
 			invalid: 'glyphicon glyphicon-remove',
@@ -10,6 +11,7 @@ $(document).ready(function() {
                 validators: {
                         stringLength: {
                         min: 3,
+                        message: 'Escriba su nombre'
                     },
                         notEmpty: {
                         message: 'Ingresa tu nombre correctamente'
@@ -20,9 +22,10 @@ $(document).ready(function() {
                 validators: {
                         stringLength: {
                         min: 3,
+                        message: 'Escriba su apellido'
                     },
                         notEmpty: {
-                        message: 'Ingresa tu apellido'
+                        message: 'Escriba tu apellido'
                     }
                 }
             },
@@ -40,30 +43,28 @@ $(document).ready(function() {
                 validators: {
                         stringLength: {
                         min: 6,
+                        message: 'Necesitamos un C.I. válido'
                     },
                         notEmpty: {
                         message: 'Ingresa un CI válido'
                     }
                 }
             },          
-            pais: {
-                validators: {
-                     stringLength: {
-                        min: 4,
-                    },
-                }
-            },
             telefono: {
                 validators: {
 					 stringLength: {
                         min: 8,
+                        message: 'Escriba un teléfono de referencia'
                     },
+                    digits: {
+                            message: 'El telefono solo puede contener número'
+                        },
                     notEmpty: {
                         message: 'Porfavor ingrese su número de teléfono'
                     },
                 }
             },
-            Ciudad: {
+            ciudad: {
                 validators: {
                         stringLength: {
                         min: 5,
@@ -75,4 +76,16 @@ $(document).ready(function() {
             }
             }
         })
+        .on('error.field.bv', function(e, data) {
+           var $parent = data.element.parents('.form-group'),
+                $icon   = $parent.find('.form-control-feedback[data-bv-icon-for="' + data.field + '"]'),
+                title   = $icon.data('bs.tooltip').getTitle();
+
+            $icon.tooltip('destroy').tooltip({
+                html: true,
+                placement: 'right',
+                title: title,
+                container: 'body'
+            });
+        });  
 });

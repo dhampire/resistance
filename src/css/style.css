@@ -1,16 +1,34 @@
 body{
-	background: rgba(255,255,25, 1) url('../img/bg.jpeg') no-repeat center center fixed;
-	background-size: cover;
 	color: white;
 	font-size: 16px;
 }
 
+a{
+  color: white;
+}
+a:hover, a:active, a:focus{
+  color: white;
+  text-decoration: none;
+}
 /* header
 */
 
+.bg__black{
+	  background:
+   linear-gradient(to right, rgb(6, 12, 34, .8), rgb(0, 0, 0, 1)),
+   url('../img/bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: multiply;
+	width: 100%;
+	height: 100vh;
+}
+
+
 #header {
   height: 90px;
-  padding: 25px 0;
+  padding: 0;
   position: fixed;
   left: 0;
   top: 0;
@@ -19,40 +37,37 @@ body{
   z-index: 997;
 }
 
-#header.header-scrolled,
-#header.header-fixed {
+.header-scrolled,
+.header-fixed {
   background: rgba(6, 12, 34, 0.98);
   height: 70px;
   padding: 15px 0;
   transition: all 0.5s;
 }
 
-#header #logo h1 {
-  font-size: 36px;
-  margin: 0;
-  padding: 6px 0;
-  line-height: 1;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-#header #logo h1 span {
-  color: #f82249;
-}
-
-#header #logo h1 a,
-#header #logo h1 a:hover {
-  color: #fff;
-}
-
-#header #logo img {
+#header img {
   padding: 0;
   margin: 0;
   max-height: 40px;
 }
 
+.navbar-toggle .icon-bar{
+	background: white;
+}
+.navbar-nav > li > a{
+	color: white
+}
+.navbar-nav > li > a:active, .navbar-nav > li > a:focus, .navbar-nav > li > a:hover{
+	background: rgba(255,255,255, .0);
+	color: white
+}
+.navbar-collapse.in{
+	background: rgba(6, 12, 34, 0.5);
+}
+.navbar-toggle{
+	margin-top: 0;
+	padding-top: 0
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -116,13 +131,6 @@ body{
   content: "\f105";
 }
 
-/* Nav Meu Container */
-
-#nav-menu-container {
-  float: right;
-  margin: 0;
-}
-
 /* Nav Meu Styling */
 
 .nav-menu a {
@@ -145,7 +153,7 @@ body{
   margin-left: 8px;
 }
 
-.nav-menu > li > a:before {
+.nav-menu a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -164,7 +172,7 @@ body{
   width: 100%;
 }
 
-.nav-menu li.buy-tickets a {
+.buy-tickets, .btn__registro {
   color: #fff;
   background: #f82249;
   padding: 7px 22px;
@@ -173,17 +181,16 @@ body{
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   margin-left: 8px;
-  margin-top: 2px;
+  margin-top: 10px;
   line-height: 1;
-  font-size: 13px;
 }
 
-.nav-menu li.buy-tickets a:hover {
+.buy-tickets:hover, .btn__registro:hover{
   background: none;
 }
 
-.nav-menu li.buy-tickets:hover a:before,
-.nav-menu li.buy-tickets.menu-active a:before {
+.buy-tickets:hover:before, .btn__registro:before
+.buy-tickets.menu-active a:before {
   visibility: hidden;
 }
 
@@ -217,133 +224,108 @@ body{
 .nav-menu ul ul {
   margin: 0;
 }
-
-/* Mobile Nav Toggle */
-
-#mobile-nav-toggle {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 999;
-  margin: 15px 15px 0 0;
-  border: 0;
-  background: none;
-  font-size: 24px;
-  display: none;
-  transition: all 0.4s;
-  outline: none;
-  cursor: pointer;
+.navbar-brand{
+	padding: 0;
+	height:auto;
 }
-
-#mobile-nav-toggle i {
-  color: #fff;
-}
-
-/* Mobile Nav Styling */
-
-#mobile-nav {
-  position: fixed;
-  top: 0;
-  padding-top: 18px;
-  bottom: 0;
-  z-index: 998;
-  background: rgba(6, 12, 34, 0.9);
-  left: -260px;
-  width: 260px;
-  overflow-y: auto;
-  transition: 0.4s;
-}
-
-#mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-#mobile-nav ul li {
-  position: relative;
-}
-
-#mobile-nav ul li a {
-  color: #fff;
-  font-size: 17px;
-  overflow: hidden;
-  padding: 10px 22px 10px 15px;
-  position: relative;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-  outline: none;
-}
-
-#mobile-nav ul li a:hover {
-  color: #f82249;
-}
-
-#mobile-nav ul li li {
-  padding-left: 30px;
-}
-
-#mobile-nav ul .menu-has-children i {
-  position: absolute;
-  right: 0;
-  z-index: 99;
-  padding: 15px;
-  cursor: pointer;
-  color: #fff;
-}
-
-#mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #f82249;
-}
-
-#mobile-nav ul .menu-item-active {
-  color: #f82249;
-}
-
-#mobile-body-overly {
-  width: 100%;
-  height: 100%;
-  z-index: 997;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(6, 12, 34, 0.8);
-  display: none;
-}
-
-/* Mobile Nav body classes */
-
-body.mobile-nav-active {
-  overflow: hidden;
-}
-
-body.mobile-nav-active #mobile-nav {
-  left: 0;
-}
-
-body.mobile-nav-active #mobile-nav-toggle {
-  color: #fff;
-}
-
-
 /* Form*/
 .resistance__forms{
-	background: rgba(0,0,0, .8);
 	padding: 5rem;
 	border-radius: 5px;
-	margin-top: 200px;
+	margin-top: 100px;
+}
+  .form-control-feedback{
+    right: 15px;
+  }
+  .tooltip.right .tooltip-inner {
+    background-color:blue;
+  }
+
+
+
+/* Label badgebox */
+.badgebox {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  margin-bottom: 12px;
+  padding-right: 35px;
+  position: relative;
+  user-select: none;
 }
 
-.badgebox
-{
-    opacity: 0;
+/* Hide the browser's default checkbox */
+.badgebox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  background-color: #f82249;
+  border-radius:50%;
+  height: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+}
+
+/* On mouse-over, add a grey background color */
+.badgebox:hover input ~ .checkmark {
+  background-color: #f82249;
+}
+
+/* When the checkbox is checked, add a blue background */
+.badgebox input:checked ~ .checkmark {
+  background-color: #f82249;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.badgebox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.badgebox .checkmark:after {
+  left: 8px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+
+/*.badgebox{
+  opacity: 0;
 }
 
 	.badgebox + .badge
-	{
-	    text-indent: -999999px;
-
+	{ 
+    text-indent: -999999px;
 		width: 27px;
 	}
 
@@ -355,10 +337,121 @@ body.mobile-nav-active #mobile-nav-toggle {
 	.badgebox:checked + .badge
 	{
 		text-indent: 0;
-	}
+	}*/
 
 input, select {
 	background: rgba(255,255,255, .1) !important;
-	color: white !important;
 	font-weight: bold !important;
+}
+
+
+.btn__label{
+  background: none;
+  border-radius: 50px;
+  border: 2px solid white;
+  transition: all ease-in-out 0.3s;
+  color: white
+}
+.btn__label:hover{
+	border: 2px solid ;
+	color: #f82249
+}
+	.badge{
+		background: #f82249;
+	}
+
+/* Counter */ 
+.counter{
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  justify-items: center;
+  font-size: 10rem;
+  line-height: 8rem
+}
+  .counter__item{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5rem;
+    justify-items:center;
+  }
+    .timer__label{
+      display: block;
+      font-size: 1.5rem;
+      font-style: italic;
+      line-height: .8;
+      text-align: center;
+      position: relative;
+    }
+    .cta__counter{
+      margin-top: 5rem;
+      font-size: 2rem;
+    }
+
+
+/* Line Up */ 
+.lineup{
+  align-content: center;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
+  display: grid;
+  grid-template-columns:repeat(4, 250px);
+  justify-items:center;
+}
+  .lineup__djs{
+    position: relative;
+    padding:2rem;
+    max-width: 250px;
+  }
+    .lineup__djs--img{
+      border-radius:50%;
+      width: 100%;
+    }
+    .lineup__title{
+      position:absolute;
+      left:50%;
+      right:50%;
+      top:50%;
+    }
+/* Medias query */ 
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #header img{
+    max-width: 300px;
+    height: auto;
+  }
+  .collapse {
+       display: none !important;
+  }
+  
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #header img{
+    max-width: 300px;
+    height: auto;
+  }
+  .collapse {
+       display: none !important;
+  }
+  
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    #header img{
+    max-width: 250px;
+    height: auto;
+  }
+  .collapse {
+       display: none !important;
+  }
+  
+}
+
+@media (max-width: 480px ){
+	#header img{
+		max-width: 200px;
+		height: auto;
+	}
+	.navbar-header{
+		margin-left: 0 !important;
+	}
 }
