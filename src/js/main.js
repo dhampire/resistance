@@ -1,6 +1,6 @@
 //timer
 
-var endDate = new Date("Oct 15, 2019 12:00:00").getTime();
+var endDate = new Date("Aug 1, 2019 10:30:00").getTime();
 
 var timer = setInterval(function() {
 
@@ -24,7 +24,7 @@ var timer = setInterval(function() {
     
     } else {
 
-        document.getElementById("timer").innerHTML = "Evento realizado";
+        document.getElementById("timer").innerHTML = "";
     
     }
     

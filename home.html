@@ -13,87 +13,59 @@
 		h e a d e r
  ***************************-->
 
-<header id="header">
-  <nav class="navbar header-scrolled" id="mNavbar">
-    <div class="container">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-      	<img src="src/img/logo.png" alt="">
-      </a>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="toggle">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
+<main class="main">
+	<header class="header">
+		<img src="src/img/logo.png" alt="">
+		<div class="event__date">
+			12 Octubre 2017
+		</div>
+		<div class="facebook">
+			<i class="fab fa-facebook"> </i> Facebook
+		</div>
+	</header>
 
-
-      <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav nav-menu">
-          <li><a href="#">Home</a>
-          </li>
-          <li><a href="#section2">Services</a>
-          </li>
-          <li><a href="#section3">Contact</a>
-          </li>
-        </ul>
-
-        <button type="button" class="buy-tickets">Sign in</button>
-      </div>
-    </div>
-  </nav>
-</header>
-<!-- Contador -->
-<div class="counter">
-		<div id="timer" class="counter__item">
-		    <p id="timer-days" class="timer__round">
-		        <span class="timer__label"></span>
-		        </span>
-		    </p>
-		    <p id="timer-hours" class="timer__round">
-		        <span class="timer__label"></span>
-		        </span>
-		    </p>
-		    <p id="timer-mins" class="timer__round">
-		        <span class="timer__label"></span>
-		        </span>
-		    </p>
-		    <p id="timer-secs" class="timer__round">
-		        <span class="timer__label"></span>
-		        </span>
-		    </p>
+	<!-- Contador -->
+	<section class="counter">
+			<div class="steps">
+				<h2 class="step__title">1er PASO</h2>
+				<p>Resgitrate en la pagina de <a href="https://santacruz.resistancemusic.com/tickets/2019/" target="_blank">RESISTANCE</a> para acceder a descuentos y estar atento a lineup del máximo evento de musica electrónica en <span>Santa Cruz</span>, que se realizará el <span>12 de Octubre en Ventura Arena</span> </p>
+				<div class="button--register">
+					<a target="_blank" href="https://santacruz.resistancemusic.com/tickets/2019/" class="cta__counter btn btn--register">Registrarse</a>
+				</div>
+			</div>
+			<div class="steps">
+				<h2 class="step__title">2do PASO</h2>
+			</div>
+			<div id="timer" class="counter__item">
+				<p class="counter__title">Preventa habilitada en...</p>
+			    <p id="timer-days" class="timer__round">
+			        <span class="timer__label"></span>
+			        </span>
+			    </p>
+			    <p id="timer-hours" class="timer__round">
+			        <span class="timer__label"></span>
+			        </span>
+			    </p>
+			    <p id="timer-mins" class="timer__round">
+			        <span class="timer__label"></span>
+			        </span>
+			    </p>
+			    <p id="timer-secs" class="timer__round">
+			        <span class="timer__label"></span>
+			        </span>
+			    </p>
+			</div>
+			<div class="steps">
+				<p>Compra las entradas en <span>PRE VENTA</span>aqui</p>
+				<div class="button--register">
+					<a target="_blank" href="https://santacruz.resistancemusic.com/tickets/2019/" class="cta__counter btn btn--register">Registrarse</a>
+				</div>
+			</div>
+		<div class="footer">
+			<img src="src/img/logo-ultra.png" alt="">
 		</div>
-		<a href="#" class="cta__counter buy-tickets">Registrate ahora</a>
-</div>
-
-<!-- Line Up -->
-<div class="lineup">
-	<div class="lineup__djs">
-		<img class="lineup__djs--img" src="https://picsum.photos/id/1027/300/300" alt="djs">
-		<div class="lineup__title">
-			Djs Name Here
-		</div>
-	</div>
-	<div class="lineup__djs">
-		<img class="lineup__djs--img" src="https://picsum.photos/id/1027/300/300" alt="djs">
-		<div class="lineup__title">
-			Djs Name Here
-		</div>
-	</div>
-	<div class="lineup__djs">
-		<img class="lineup__djs--img" src="https://picsum.photos/id/1027/300/300" alt="djs">
-		<div class="lineup__title">
-			Djs Name Here
-		</div>
-	</div>
-	<div class="lineup__djs">
-		<img class="lineup__djs--img" src="https://picsum.photos/id/1027/300/300" alt="djs">
-		<div class="lineup__title">
-			Djs Name Here
-		</div>
-	</div>
-</div>
+	</section>
+</main>
 
 <script src="src/js/main.js"></script>
 </body>

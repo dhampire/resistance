@@ -3,8 +3,9 @@ body{
 	font-size: 16px;
 }
 
-a{
-  color: white;
+a, span{
+  font-weight:500;
+  color: #f48c3e;
 }
 a:hover, a:active, a:focus{
   color: white;
@@ -14,367 +15,103 @@ a:hover, a:active, a:focus{
 */
 
 .bg__black{
-	  background:
-   linear-gradient(to right, rgb(6, 12, 34, .8), rgb(0, 0, 0, 1)),
-   url('../img/bg.jpeg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-blend-mode: multiply;
-	width: 100%;
-	height: 100vh;
+	  background: url('../img/robot.png') left bottom no-repeat, url('../img/aros.png') right bottom no-repeat, #000;
+    background-size: auto 100%;
+  	width: 100%;
+  	height: 100vh;
+}
+
+.main{
+  display:grid;
+  grid-template-columns: 60px, 1fr
+}
+.header {
+  padding: 1rem 5%;
+  display:grid;
+  background: rgb(0,0,0,.5);
+  background-blend-mode:multiply;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 
-#header {
-  height: 90px;
-  padding: 0;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  transition: all 0.5s;
-  z-index: 997;
-}
-
-.header-scrolled,
-.header-fixed {
-  background: rgba(6, 12, 34, 0.98);
-  height: 70px;
-  padding: 15px 0;
-  transition: all 0.5s;
-}
-
-#header img {
+.header img, .footer img {
   padding: 0;
   margin: 0;
   max-height: 40px;
 }
+  .event__date{
+    text-align:center;
+  }
+  .facebook{
+    text-align:right;
+  }
 
-.navbar-toggle .icon-bar{
-	background: white;
-}
-.navbar-nav > li > a{
-	color: white
-}
-.navbar-nav > li > a:active, .navbar-nav > li > a:focus, .navbar-nav > li > a:hover{
-	background: rgba(255,255,255, .0);
-	color: white
-}
-.navbar-collapse.in{
-	background: rgba(6, 12, 34, 0.5);
-}
-.navbar-toggle{
-	margin-top: 0;
-	padding-top: 0
-}
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-
-/* Nav Menu Essentials */
-
-.nav-menu,
-.nav-menu * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.nav-menu ul {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
-
-.nav-menu li {
-  position: relative;
-  white-space: nowrap;
-}
-
-.nav-menu > li {
-  float: left;
-}
-
-.nav-menu li:hover > ul,
-.nav-menu li.sfHover > ul {
-  display: block;
-}
-
-.nav-menu ul ul {
-  top: 0;
-  left: 100%;
-}
-
-.nav-menu ul li {
-  min-width: 180px;
-}
-
-/* Nav Menu Arrows */
-
-.sf-arrows .sf-with-ul {
-  padding-right: 30px;
-}
-
-.sf-arrows .sf-with-ul:after {
-  content: "\f107";
-  position: absolute;
-  right: 15px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
-
-.sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
-}
-
-/* Nav Meu Styling */
-
-.nav-menu a {
-  padding: 8px;
-  text-decoration: none;
-  display: inline-block;
-  color: rgba(202, 206, 221, 0.8);
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  outline: none;
-}
-
-.nav-menu .menu-active a,
-.nav-menu a:hover {
+.btn{
   color: #fff;
-}
-
-.nav-menu > li {
-  margin-left: 8px;
-}
-
-.nav-menu a:before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #f82249;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-.nav-menu a:hover:before,
-.nav-menu li:hover > a:before,
-.nav-menu .menu-active > a:before {
-  visibility: visible;
-  width: 100%;
-}
-
-.buy-tickets, .btn__registro {
-  color: #fff;
-  background: #f82249;
+  background: #f48c3e;
   padding: 7px 22px;
-  border-radius: 50px;
-  border: 2px solid #f82249;
+  border: 2px solid #f48c3e;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   margin-left: 8px;
   margin-top: 10px;
   line-height: 1;
 }
+  .btn--register{
+    margin:0;
+    background:none;
 
-.buy-tickets:hover, .btn__registro:hover{
-  background: none;
-}
-
-.buy-tickets:hover:before, .btn__registro:before
-.buy-tickets.menu-active a:before {
-  visibility: hidden;
-}
-
-.nav-menu ul {
-  margin: 4px 0 0 0;
-  padding: 10px;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  background: #fff;
-  border-radius: 3px;
-}
-
-.nav-menu ul li {
-  transition: 0.3s;
-}
-
-.nav-menu ul li a {
-  padding: 10px;
-  color: #060c22;
-  transition: 0.3s;
-  display: block;
-  font-size: 13px;
-  text-transform: none;
-  border-radius: 3px;
-}
-
-.nav-menu ul li:hover > a {
-  background: #f82249;
-  color: #fff;
-}
-
-.nav-menu ul ul {
-  margin: 0;
-}
-.navbar-brand{
-	padding: 0;
-	height:auto;
-}
-/* Form*/
-.resistance__forms{
-	padding: 5rem;
-	border-radius: 5px;
-	margin-top: 100px;
-}
-  .form-control-feedback{
-    right: 15px;
-  }
-  .tooltip.right .tooltip-inner {
-    background-color:blue;
   }
 
 
-
-/* Label badgebox */
-.badgebox {
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  cursor: pointer;
-  margin-bottom: 12px;
-  padding-right: 35px;
-  position: relative;
-  user-select: none;
+/* Counter */
+.steps{
+  color: #9b9b9b;
+  display: grid;
+  font-size:1rem;
+  grid-template-columns: 1fr 200px;
+  text-align:center;
+  width:60%;
+  grid-gap: 2rem;
+  justify-self: right;
+  margin-right: 5%;
 }
+  .step__title{
+    grid-column: 1 / -1;;
+  }
 
-/* Hide the browser's default checkbox */
-.badgebox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+  .steps p{
+    color: white;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
 
-/* Create a custom checkbox */
-.checkmark {
-  background-color: #f82249;
-  border-radius:50%;
-  height: 20px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  width: 20px;
-}
-
-/* On mouse-over, add a grey background color */
-.badgebox:hover input ~ .checkmark {
-  background-color: #f82249;
-}
-
-/* When the checkbox is checked, add a blue background */
-.badgebox input:checked ~ .checkmark {
-  background-color: #f82249;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-/* Show the checkmark when checked */
-.badgebox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-/* Style the checkmark/indicator */
-.badgebox .checkmark:after {
-  left: 8px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-
-
-
-
-
-
-
-
-
-/*.badgebox{
-  opacity: 0;
-}
-
-	.badgebox + .badge
-	{ 
-    text-indent: -999999px;
-		width: 27px;
-	}
-
-	.badgebox:focus + .badge
-	{
-	    box-shadow: inset 0px 0px 5px;
-	}
-
-	.badgebox:checked + .badge
-	{
-		text-indent: 0;
-	}*/
-
-input, select {
-	background: rgba(255,255,255, .1) !important;
-	font-weight: bold !important;
-}
-
-
-.btn__label{
-  background: none;
-  border-radius: 50px;
-  border: 2px solid white;
-  transition: all ease-in-out 0.3s;
-  color: white
-}
-.btn__label:hover{
-	border: 2px solid ;
-	color: #f82249
-}
-	.badge{
-		background: #f82249;
-	}
-
-/* Counter */ 
 .counter{
   align-content: center;
   display: grid;
   grid-template-columns: 1fr;
-  height: 100vh;
   justify-items: center;
   font-size: 10rem;
-  line-height: 8rem
+  color: #f48c3e;
+  line-height: 8rem;
+  height:calc(100vh - 60px);
 }
+  .counter__title{
+    grid-column:1 / -1;
+    font-size: 2rem;
+    color:white;
+  }
   .counter__item{
+    cursor:pointer;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5rem;
+    grid-template-columns: repeat(4, 1fr);
     justify-items:center;
+    justify-self: end;
+    margin-right: 5%;
+    width:60%;  
   }
     .timer__label{
       display: block;
@@ -385,34 +122,23 @@ input, select {
       position: relative;
     }
     .cta__counter{
-      margin-top: 5rem;
       font-size: 2rem;
     }
 
+    .counter__item:hover, .timer__label:hover, .cta__counter:hover{
+      text-shadow:2px 2px 2px 2px white;
+    }
 
-/* Line Up */ 
-.lineup{
-  align-content: center;
-  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
-  display: grid;
-  grid-template-columns:repeat(4, 250px);
-  justify-items:center;
+.footer{
+  text-align:right;
+  justify-self: end;
+  align-self: end;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
 }
-  .lineup__djs{
-    position: relative;
-    padding:2rem;
-    max-width: 250px;
-  }
-    .lineup__djs--img{
-      border-radius:50%;
-      width: 100%;
-    }
-    .lineup__title{
-      position:absolute;
-      left:50%;
-      right:50%;
-      top:50%;
-    }
+
+
 /* Medias query */ 
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -421,8 +147,6 @@ input, select {
     height: auto;
   }
   .collapse {
-       display: none !important;
-  }
   
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -430,9 +154,7 @@ input, select {
     max-width: 300px;
     height: auto;
   }
-  .collapse {
-       display: none !important;
-  }
+
   
 }
 @media (min-width: 481px) and (max-width: 767px) {
@@ -440,9 +162,7 @@ input, select {
     max-width: 250px;
     height: auto;
   }
-  .collapse {
-       display: none !important;
-  }
+
   
 }
 
@@ -450,8 +170,5 @@ input, select {
 	#header img{
 		max-width: 200px;
 		height: auto;
-	}
-	.navbar-header{
-		margin-left: 0 !important;
 	}
 }
