@@ -8,9 +8,13 @@ a, span{
   color: #f48c3e;
 }
 a:hover, a:active, a:focus{
-  color: white;
+  color: #38b698;
   text-decoration: none;
 }
+
+  .fb{
+    color: #38b698;
+  }
 /* header
 */
 
@@ -65,7 +69,29 @@ a:hover, a:active, a:focus{
 
   }
 
-
+/* event date*/
+.event__date{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  width:120px;
+  justify-self:center;
+}
+  .e--day{
+    justify-self:start;
+    color:white;
+    font-size:1.5rem;
+  }
+  .e--year{
+    color:white;
+    font-size:1.5rem;
+    justify-self:end;
+  }
+  .e--date{
+    font-weight:700;
+    font-size:3rem;
+    color: #f48c3e;
+    grid-column: 1 / -1;
+  }
 /* Counter */
 .steps{
   color: #9b9b9b;
@@ -87,7 +113,12 @@ a:hover, a:active, a:focus{
     font-size: 2rem;
     line-height: 1.5;
   }
+    .steps_buy{
+      grid-column: 1 / span 3;
+      color:white;
+      font-size:2rem
 
+    }
 .counter{
   align-content: center;
   display: grid;
@@ -120,6 +151,7 @@ a:hover, a:active, a:focus{
       line-height: .8;
       text-align: center;
       position: relative;
+      color: #38b698;
     }
     .cta__counter{
       font-size: 2rem;

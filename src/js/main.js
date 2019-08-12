@@ -24,7 +24,7 @@ var timer = setInterval(function() {
     
     } else {
 
-        document.getElementById("timer").innerHTML = "";
+        document.getElementById("timer").innerHTML = "<div class='steps_buy'><p>Compra las entradas en <span>PRE VENTA</span> aquí</p></div><div class='button--register'><a target='_blank' href='https://multipago.bo' class='cta__counter btn btn--register'>COMPRAR</a></div>";
     
     }
     
